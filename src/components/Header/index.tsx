@@ -1,7 +1,6 @@
 import styles from './styles.module.scss';
 import Image from '../../../node_modules/next/image';
 import logo from '../../../public/images/logo.png';
-import 'module-alias/register';
 import { ActiveLink } from '../ActiveLink/index';
 
 
@@ -9,18 +8,20 @@ export function Header(){
     return(
         <header className={styles.headerContainer}>
            <div className={styles.headerContent}>
+           <ActiveLink href="/" activeClassName={styles.active}>
             <a>
-             <Image src={logo} alt="Blog Devs AO logo" />
+            <Image src={logo} alt="Blog Devs AO logo" />
             </a>
+            </ActiveLink> 
 
             <nav>
-                <ActiveLink href="/" activeClassName={styles.activeLink}>
+                <ActiveLink href="/" activeClassName={styles.active}>
                     <a>Home</a>
                 </ActiveLink> 
-                <ActiveLink href="/posts" activeClassName={styles.activeLink}>
+                <ActiveLink href="/posts" activeClassName={styles.active}>
                     <a>Blog</a>
                 </ActiveLink> 
-                <ActiveLink href="/sobre" activeClassName={styles.activeLink}>
+                <ActiveLink href="/sobre" activeClassName={styles.active}>
                     <a>Quem somos?</a>
                 </ActiveLink> 
             </nav>

@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*" : ["*", "generated/*"]
+    },
     "target": "es5",
     "lib": [
       "dom",
@@ -14,9 +18,9 @@
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "resolveJsonModule": false,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "resolveJsonModule": false,
   },
   "include": [
     "next-env.d.ts",
